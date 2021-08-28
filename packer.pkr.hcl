@@ -62,7 +62,6 @@ source "amazon-ebs" "k3s-ami" {
     Name = "packer-builder"
   }
   security_group_id = "${var.security_group}"
-  secret_key   = "${var.aws_secret_access_key}"
   source_ami = "${var.source_ami}"
   ssh_timeout  = "5m"
   ssh_username = "ubuntu"
