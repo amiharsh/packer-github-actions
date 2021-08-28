@@ -19,10 +19,10 @@ jobs:
         with:
           command: init
       # fix backwards incompatibilities in template
-      - name: Fix Template
-        uses: hashicorp/packer-github-actions@master
-        with:
-          command: fix
+#       - name: Fix Template
+#         uses: hashicorp/packer-github-actions@master
+#         with:
+#           command: fix
 
       # validate templates
       - name: Validate Template
