@@ -9,7 +9,6 @@ sudo systemctl enable docker
 sudo usermod -aG docker ${USER}
 newgrp docker
 sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
-echo "a1b2c3d4e5" | passwd ubuntu --stdin
 wget https://get.helm.sh/helm-v3.6.3-linux-amd64.tar.gz
 tar -zxvf helm-v3.6.3-linux-amd64.tar.gz
 mv linux-amd64/helm /usr/local/bin/helm
