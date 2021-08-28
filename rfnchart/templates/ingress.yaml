@@ -10,12 +10,13 @@ metadata:
     nginx.ingress.kubernetes.io/cors-allow-methods: "PUT, GET, POST, OPTIONS"
 spec:
   rules:
-    -  http:
+    - host: "phoenixapp.ga"
+      http:
         paths:
           - path: /
             pathType: Prefix
             backend:
              service:
-              name: rfn-svc
+              name: rfnchart
               port:
                number: 8080
