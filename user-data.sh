@@ -1,7 +1,6 @@
 #!/bin/bash
 sudo -i
 curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--no-deploy traefik" sh -s -
-export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 cat >/var/lib/rancher/k3s/server/manifests/ingress-nginx.yaml <<EOF
 apiVersion: v1
 kind: Namespace
@@ -33,6 +32,6 @@ spec:
       config:
         use-forwarded-headers: "true"
 EOF
-service sshd restart
+export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 helm install rfnchart /opt/rfnchart
 
