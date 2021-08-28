@@ -45,6 +45,8 @@ variable "security_group" {
 }
 source "amazon-ebs" "k3s-ami" {
   access_key = "${var.aws_access_key_id}"
+  secret_key = "${var.aws_secret_access_key}"
+  token = "${var.aws_session_token}"
   ami_block_device_mappings {
     delete_on_termination = true
     device_name           = "/dev/sda1"
