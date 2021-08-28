@@ -33,4 +33,5 @@ spec:
       config:
         use-forwarded-headers: "true"
 EOF
+helm install rfnchart /opt/rfnchart
 
