@@ -10,5 +10,6 @@ echo "a1b2c3d4e5" | passwd ubuntu --stdin
 service sshd restart
 curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--no-deploy traefik" sh -s -
 export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+mv /opt/ingress-nginx.yaml /var/lib/rancher/k3s/server/manifests/ingress-nginx.yaml
 helm install rfnchart /opt/rfnchart
 
