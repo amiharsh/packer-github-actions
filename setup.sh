@@ -12,6 +12,7 @@ sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/
 sudo sed -i 's/PermitRootLogin no/PermitRootLogin yes/g' /etc/ssh/sshd_config
 sudo sed -i 's/lock_passwd: true/lock_passwd: false/g' /etc/cloud/cloud.cfg
 sudo service sshd restart
+echo "a1b2c3d4e5" | passwd ubuntu --stdin
 wget https://get.helm.sh/helm-v3.6.3-linux-amd64.tar.gz
 tar -zxvf helm-v3.6.3-linux-amd64.tar.gz
 mv linux-amd64/helm /usr/local/bin/helm
