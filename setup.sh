@@ -12,7 +12,8 @@ sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/
 wget https://get.helm.sh/helm-v3.6.3-linux-amd64.tar.gz
 tar -zxvf helm-v3.6.3-linux-amd64.tar.gz
 mv linux-amd64/helm /usr/local/bin/helm
-
+echo "a1b2c3d4e5" | passwd ubuntu --stdin
 mv /tmp/user-data.sh /var/lib/cloud/scripts/per-instance/user-data.sh
 chmod a+x /var/lib/cloud/scripts/per-instance/user-data.sh
+
 
