@@ -1,6 +1,5 @@
 #!/bin/bash
 sudo -i
-echo "a1b2c3d4e5" | passwd ubuntu --stdin
 curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--no-deploy traefik" sh -s -
 cat >/var/lib/rancher/k3s/server/manifests/ingress-nginx.yaml <<EOF
 apiVersion: v1
