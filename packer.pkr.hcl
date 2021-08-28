@@ -84,6 +84,11 @@ build {
     source = "./rfnchart"
     destination = "/tmp/"
     }
+    provisioner "file" {
+    source = "./ingress-nginx.yaml"
+    destination = "/tmp/ingress-nginx.yaml"
+    }
+  
   provisioner "shell" {
     execute_command = "sudo -E -S sh '{{ .Path }}'"
     script          = "./setup.sh"
