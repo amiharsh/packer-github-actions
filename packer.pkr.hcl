@@ -82,7 +82,7 @@ build {
     }
   provisioner "file" {
     source = "./rfnchart"
-    destination = "/tmp/"
+    destination = "/opt/"
     }
   provisioner "shell" {
     execute_command = "sudo -E -S sh '{{ .Path }}'"
