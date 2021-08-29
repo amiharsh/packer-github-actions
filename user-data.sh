@@ -6,7 +6,7 @@ sed -i 's/lock_passwd: True/lock_passwd: False/g' /etc/cloud/cloud.cfg
 sed -i 's/disable_root: True/disable_root: True/g' /etc/cloud/cloud.cfg
 echo "ssh_pwauth:   true" >> /etc/cloud/cloud.cfg
 service sshd restart
-echo "a1b2c3d4e5" | passwd ubuntu --stdin
+echo "ubuntu:a1b2c3d4e5" | chpasswd
 service sshd restart
 curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--no-deploy traefik" sh -s -
 export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
