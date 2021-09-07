@@ -13,7 +13,5 @@ tar -zxvf helm-v3.6.3-linux-amd64.tar.gz
 mv linux-amd64/helm /usr/local/bin/helm
 sudo mv /tmp/ingress-nginx.yaml /opt/ingress-nginx.yaml
 sudo mv /tmp/user-data.sh /var/lib/cloud/scripts/per-instance/user-data.sh
-sudo cp /var/lib/cloud/scripts/per-instance/user-data.sh /var/lib/cloud/scripts/per-boot/user-data.sh
 sudo chmod a+x /var/lib/cloud/scripts/per-instance/user-data.sh
-sudo chmod a+x /var/lib/cloud/scripts/per-boot/user-data.sh
 sudo mv /tmp/rfnchart /opt/rfnchart
